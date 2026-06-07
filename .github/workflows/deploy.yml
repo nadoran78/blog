@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 24
 
-      - run: npm ci
+      - run: npm install
       - run: npx quartz plugin install
       - run: npx quartz build
 
