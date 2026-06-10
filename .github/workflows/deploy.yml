@@ -30,6 +30,7 @@ jobs:
       - run: npm install
       - run: npx quartz plugin install
       - run: npx quartz build
+      - run: cp googled002babeaaf9ad0a.html public/
 
       - uses: actions/upload-pages-artifact@v4
         with:
