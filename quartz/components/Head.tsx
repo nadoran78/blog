@@ -44,6 +44,19 @@ export default (() => {
     return (
       <head>
         <title>{title}</title>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGDZ1C6685"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HGDZ1C6685');
+            `,
+          }}
+        />
+
         <meta charSet="utf-8" />
         {coreStylesheet && <link rel="preload" href={coreStylesheet} as="style" />}
         {coreScript && coreScript.contentType === "external" && (
